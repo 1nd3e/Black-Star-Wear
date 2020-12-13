@@ -16,9 +16,12 @@
 		782149A825869E2D00CC8DE6 /* CategoriesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782149A325869E2D00CC8DE6 /* CategoriesConfigurator.swift */; };
 		782149A925869E2D00CC8DE6 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782149A425869E2D00CC8DE6 /* Categories.swift */; };
 		782149B125869E9700CC8DE6 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782149B025869E9700CC8DE6 /* Categories.storyboard */; };
+		8E557FB31082D47551BD995F /* Pods_Black_Star_Wear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6798E8D48639C5802225F97B /* Pods_Black_Star_Wear.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6798E8D48639C5802225F97B /* Pods_Black_Star_Wear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Black_Star_Wear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A0B9F2F3FF4B4BDF2F87E50 /* Pods-Black Star Wear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Black Star Wear.release.xcconfig"; path = "Target Support Files/Pods-Black Star Wear/Pods-Black Star Wear.release.xcconfig"; sourceTree = "<group>"; };
 		7821497E258684ED00CC8DE6 /* Black Star Wear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Black Star Wear.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78214981258684ED00CC8DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7821498A258684EF00CC8DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		782149A325869E2D00CC8DE6 /* CategoriesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesConfigurator.swift; sourceTree = "<group>"; };
 		782149A425869E2D00CC8DE6 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		782149B025869E9700CC8DE6 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
+		84BC63F168DA7516B05D08EB /* Pods-Black Star Wear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Black Star Wear.debug.xcconfig"; path = "Target Support Files/Pods-Black Star Wear/Pods-Black Star Wear.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +41,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E557FB31082D47551BD995F /* Pods_Black_Star_Wear.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B5FC36C96938A280EB00797 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84BC63F168DA7516B05D08EB /* Pods-Black Star Wear.debug.xcconfig */,
+				6A0B9F2F3FF4B4BDF2F87E50 /* Pods-Black Star Wear.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		78214975258684EC00CC8DE6 = {
 			isa = PBXGroup;
 			children = (
 				78214980258684ED00CC8DE6 /* Black Star Wear */,
 				7821497F258684ED00CC8DE6 /* Products */,
+				5B5FC36C96938A280EB00797 /* Pods */,
+				B4B07C472242E5D2C7776D8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +165,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B4B07C472242E5D2C7776D8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6798E8D48639C5802225F97B /* Pods_Black_Star_Wear.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78214992258684EF00CC8DE6 /* Build configuration list for PBXNativeTarget "Black Star Wear" */;
 			buildPhases = (
+				2B2646C0EBC0E61010B51C4A /* [CP] Check Pods Manifest.lock */,
 				7821497A258684EC00CC8DE6 /* Sources */,
 				7821497B258684EC00CC8DE6 /* Frameworks */,
 				7821497C258684EC00CC8DE6 /* Resources */,
+				70B4A8FCF1EBD8022771086D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,6 +239,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B2646C0EBC0E61010B51C4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Black Star Wear-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70B4A8FCF1EBD8022771086D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Black Star Wear/Pods-Black Star Wear-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Black Star Wear/Pods-Black Star Wear-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Black Star Wear/Pods-Black Star Wear-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7821497A258684EC00CC8DE6 /* Sources */ = {
@@ -359,6 +428,7 @@
 		};
 		78214993258684EF00CC8DE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84BC63F168DA7516B05D08EB /* Pods-Black Star Wear.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -379,6 +449,7 @@
 		};
 		78214994258684EF00CC8DE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A0B9F2F3FF4B4BDF2F87E50 /* Pods-Black Star Wear.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
