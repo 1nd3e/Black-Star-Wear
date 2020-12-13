@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		78214982258684ED00CC8DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78214981258684ED00CC8DE6 /* AppDelegate.swift */; };
-		78214984258684ED00CC8DE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78214983258684ED00CC8DE6 /* SceneDelegate.swift */; };
-		78214986258684ED00CC8DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78214985258684ED00CC8DE6 /* ViewController.swift */; };
-		78214989258684ED00CC8DE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78214987258684ED00CC8DE6 /* Main.storyboard */; };
 		7821498B258684EF00CC8DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7821498A258684EF00CC8DE6 /* Assets.xcassets */; };
 		7821498E258684EF00CC8DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7821498C258684EF00CC8DE6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,9 +15,6 @@
 /* Begin PBXFileReference section */
 		7821497E258684ED00CC8DE6 /* Black Star Wear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Black Star Wear.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78214981258684ED00CC8DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		78214983258684ED00CC8DE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		78214985258684ED00CC8DE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		78214988258684ED00CC8DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7821498A258684EF00CC8DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7821498D258684EF00CC8DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7821498F258684EF00CC8DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +50,36 @@
 		78214980258684ED00CC8DE6 /* Black Star Wear */ = {
 			isa = PBXGroup;
 			children = (
+				7821499C2586995F00CC8DE6 /* Modules */,
+				7821499B2586995400CC8DE6 /* Extensions */,
+				7821499A2586994800CC8DE6 /* Supporting Files */,
+			);
+			path = "Black Star Wear";
+			sourceTree = "<group>";
+		};
+		7821499A2586994800CC8DE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				78214981258684ED00CC8DE6 /* AppDelegate.swift */,
-				78214983258684ED00CC8DE6 /* SceneDelegate.swift */,
-				78214985258684ED00CC8DE6 /* ViewController.swift */,
-				78214987258684ED00CC8DE6 /* Main.storyboard */,
 				7821498A258684EF00CC8DE6 /* Assets.xcassets */,
 				7821498C258684EF00CC8DE6 /* LaunchScreen.storyboard */,
 				7821498F258684EF00CC8DE6 /* Info.plist */,
 			);
-			path = "Black Star Wear";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7821499B2586995400CC8DE6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7821499C2586995F00CC8DE6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +141,6 @@
 			files = (
 				7821498E258684EF00CC8DE6 /* LaunchScreen.storyboard in Resources */,
 				7821498B258684EF00CC8DE6 /* Assets.xcassets in Resources */,
-				78214989258684ED00CC8DE6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +151,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78214986258684ED00CC8DE6 /* ViewController.swift in Sources */,
 				78214982258684ED00CC8DE6 /* AppDelegate.swift in Sources */,
-				78214984258684ED00CC8DE6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		78214987258684ED00CC8DE6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				78214988258684ED00CC8DE6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7821498C258684EF00CC8DE6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,7 +292,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5A2X6KMTCZ;
-				INFOPLIST_FILE = "Black Star Wear/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Black Star Wear/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +301,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.1nd3e.Black-Star-Wear";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +312,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5A2X6KMTCZ;
-				INFOPLIST_FILE = "Black Star Wear/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Black Star Wear/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +321,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.1nd3e.Black-Star-Wear";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
