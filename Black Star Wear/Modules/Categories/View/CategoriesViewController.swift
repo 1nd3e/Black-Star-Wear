@@ -9,6 +9,10 @@ import UIKit
 
 final class CategoriesViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    
+    @IBOutlet private weak var tableView: UITableView!
+    
     // MARK: - Properties
     
     var presenter: CategoriesPresenterProtocol?
