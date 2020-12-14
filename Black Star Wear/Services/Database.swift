@@ -44,7 +44,7 @@ final class Database {
     // MARK: - Methods
     
     // Выполняет сохранение данные в фоновом контексте.
-    func performSave(_ block: @escaping (NSManagedObjectContext) -> Void) {
+    func save(_ block: @escaping (NSManagedObjectContext) -> Void) {
         let context = backgroundContext
         
         context.perform {

@@ -11,7 +11,7 @@ final class CategoriesTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlets
     
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var thumbImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var thumbImageView: UIImageView!
     
 }

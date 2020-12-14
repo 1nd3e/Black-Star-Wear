@@ -21,6 +21,8 @@
 		78A88A8C2587E23100F531BD /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A88A8B2587E23100F531BD /* CircleView.swift */; };
 		78A88A902587E51200F531BD /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A88A8F2587E51200F531BD /* Database.swift */; };
 		78A88A952587E68600F531BD /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78A88A932587E68600F531BD /* Data.xcdatamodeld */; };
+		78A88A9A2587EC6700F531BD /* Category+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A88A992587EC6700F531BD /* Category+Init.swift */; };
+		78A88AA72588030E00F531BD /* Subcategory+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A88AA62588030E00F531BD /* Subcategory+Init.swift */; };
 		8E557FB31082D47551BD995F /* Pods_Black_Star_Wear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6798E8D48639C5802225F97B /* Pods_Black_Star_Wear.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		78A88A8B2587E23100F531BD /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		78A88A8F2587E51200F531BD /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		78A88A942587E68600F531BD /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
+		78A88A992587EC6700F531BD /* Category+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+Init.swift"; sourceTree = "<group>"; };
+		78A88AA62588030E00F531BD /* Subcategory+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subcategory+Init.swift"; sourceTree = "<group>"; };
 		84BC63F168DA7516B05D08EB /* Pods-Black Star Wear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Black Star Wear.debug.xcconfig"; path = "Target Support Files/Pods-Black Star Wear/Pods-Black Star Wear.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +116,7 @@
 		7821499B2586995400CC8DE6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				78A88A982587EC2600F531BD /* Core Data */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +206,15 @@
 				78A88A8B2587E23100F531BD /* CircleView.swift */,
 			);
 			path = "Shared Views";
+			sourceTree = "<group>";
+		};
+		78A88A982587EC2600F531BD /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				78A88A992587EC6700F531BD /* Category+Init.swift */,
+				78A88AA62588030E00F531BD /* Subcategory+Init.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		B4B07C472242E5D2C7776D8E /* Frameworks */ = {
@@ -330,8 +344,10 @@
 				78A88A882587D96100F531BD /* CategoriesTableViewCell.swift in Sources */,
 				78214982258684ED00CC8DE6 /* AppDelegate.swift in Sources */,
 				782149A825869E2D00CC8DE6 /* CategoriesConfigurator.swift in Sources */,
+				78A88AA72588030E00F531BD /* Subcategory+Init.swift in Sources */,
 				78A88A902587E51200F531BD /* Database.swift in Sources */,
 				78A88A952587E68600F531BD /* Data.xcdatamodeld in Sources */,
+				78A88A9A2587EC6700F531BD /* Category+Init.swift in Sources */,
 				782149A725869E2D00CC8DE6 /* CategoriesViewController.swift in Sources */,
 				782149A625869E2D00CC8DE6 /* CategoriesRouter.swift in Sources */,
 				782149A925869E2D00CC8DE6 /* Categories.swift in Sources */,

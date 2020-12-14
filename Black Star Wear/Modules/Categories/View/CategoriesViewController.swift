@@ -21,10 +21,42 @@ final class CategoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.dataSource = presenter as? UITableViewDataSource
+        
+        presenter?.fetchData()
     }
     
 }
 
 // MARK: - CategoriesPresenter Delegate
 
-extension CategoriesViewController: CategoriesViewProtocol {}
+extension CategoriesViewController: CategoriesViewProtocol {
+    
+    func tableView(shouldSetUpdates state: Bool) {
+        switch state {
+        case true:
+            tableView.beginUpdates()
+        case false:
+            tableView.endUpdates()
+        }
+    }
+    
+    func tableView(shouldInsertRowsAt indexPath: [IndexPath]) {
+        tableView.insertRows(at: indexPath, with: .automatic)
+    }
+    
+    func tableView(shouldMoveRowAt indexPath: IndexPath, to newIndexPath: IndexPath) {
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        tableView.insertRows(at: [newIndexPath], with: .automatic)
+    }
+    
+    func tableView(shouldReloadRowsAt indexPath: [IndexPath]) {
+        tableView.reloadRows(at: indexPath, with: .automatic)
+    }
+    
+    func tableView(shouldDeleteRowsAt indexPath: [IndexPath]) {
+        tableView.deleteRows(at: indexPath, with: .automatic)
+    }
+    
+}
