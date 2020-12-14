@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		782149A825869E2D00CC8DE6 /* CategoriesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782149A325869E2D00CC8DE6 /* CategoriesConfigurator.swift */; };
 		782149A925869E2D00CC8DE6 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782149A425869E2D00CC8DE6 /* Categories.swift */; };
 		782149B125869E9700CC8DE6 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782149B025869E9700CC8DE6 /* Categories.storyboard */; };
+		786B755C2586A8FC00C5031F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B755B2586A8FC00C5031F /* DataProvider.swift */; };
 		8E557FB31082D47551BD995F /* Pods_Black_Star_Wear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6798E8D48639C5802225F97B /* Pods_Black_Star_Wear.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		782149A325869E2D00CC8DE6 /* CategoriesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesConfigurator.swift; sourceTree = "<group>"; };
 		782149A425869E2D00CC8DE6 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		782149B025869E9700CC8DE6 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
+		786B755B2586A8FC00C5031F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		84BC63F168DA7516B05D08EB /* Pods-Black Star Wear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Black Star Wear.debug.xcconfig"; path = "Target Support Files/Pods-Black Star Wear/Pods-Black Star Wear.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +56,6 @@
 				84BC63F168DA7516B05D08EB /* Pods-Black Star Wear.debug.xcconfig */,
 				6A0B9F2F3FF4B4BDF2F87E50 /* Pods-Black Star Wear.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +82,7 @@
 			children = (
 				7821499C2586995F00CC8DE6 /* Modules */,
 				7821499B2586995400CC8DE6 /* Extensions */,
+				786B755A2586A8D700C5031F /* Services */,
 				7821499A2586994800CC8DE6 /* Supporting Files */,
 			);
 			path = "Black Star Wear";
@@ -163,6 +165,14 @@
 				782149A425869E2D00CC8DE6 /* Categories.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		786B755A2586A8D700C5031F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				786B755B2586A8FC00C5031F /* DataProvider.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B4B07C472242E5D2C7776D8E /* Frameworks */ = {
@@ -293,6 +303,7 @@
 				782149A725869E2D00CC8DE6 /* CategoriesViewController.swift in Sources */,
 				782149A625869E2D00CC8DE6 /* CategoriesRouter.swift in Sources */,
 				782149A925869E2D00CC8DE6 /* Categories.swift in Sources */,
+				786B755C2586A8FC00C5031F /* DataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
