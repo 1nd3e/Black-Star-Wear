@@ -17,16 +17,20 @@ final class CategoriesConfigurator {
     
     func configure() -> UIViewController? {
         let storyboard = UIStoryboard(name: "Categories", bundle: nil)
-        guard let navigationController = storyboard.instantiateViewController(withIdentifier: "CategoriesNavigationController") as? UINavigationController,
-            let view = navigationController.viewControllers.first as? CategoriesViewController else {
-                return nil
+        
+        guard
+            let tabBarController = storyboard.instantiateViewController(withIdentifier: "CategoriesTabBarController") as? UITabBarController,
+            let tabBarViewControllers = tabBarController.viewControllers, let navigationController = tabBarViewControllers.first as? UINavigationController,
+            let view = navigationController.viewControllers.first as? CategoriesViewController
+        else {
+            return nil
         }
         
         let router = CategoriesRouter(view: view)
         let presenter = CategoriesPresenter(view: view, router: router)
         view.presenter = presenter
         
-        return navigationController
+        return tabBarController
     }
     
 }
