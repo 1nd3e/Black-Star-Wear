@@ -96,6 +96,9 @@ extension CategoriesPresenter: UITableViewDataSource {
 extension CategoriesPresenter: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCategory = fetchedResultsController.object(at: indexPath)
+        router.moveToSubcategories(category: selectedCategory)
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

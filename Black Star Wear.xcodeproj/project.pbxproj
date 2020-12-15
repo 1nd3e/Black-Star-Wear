@@ -17,6 +17,13 @@
 		782149A925869E2D00CC8DE6 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782149A425869E2D00CC8DE6 /* Categories.swift */; };
 		782149B125869E9700CC8DE6 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782149B025869E9700CC8DE6 /* Categories.storyboard */; };
 		7843312C2588B6A7000B1D05 /* UIImageView+ImageLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7843312B2588B6A7000B1D05 /* UIImageView+ImageLoad.swift */; };
+		784331372588D7A7000B1D05 /* SubcategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784331322588D7A7000B1D05 /* SubcategoriesPresenter.swift */; };
+		784331382588D7A7000B1D05 /* SubcategoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784331332588D7A7000B1D05 /* SubcategoriesRouter.swift */; };
+		784331392588D7A7000B1D05 /* SubcategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784331342588D7A7000B1D05 /* SubcategoriesViewController.swift */; };
+		7843313A2588D7A7000B1D05 /* SubcategoriesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784331352588D7A7000B1D05 /* SubcategoriesConfigurator.swift */; };
+		7843313B2588D7A7000B1D05 /* Subcategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784331362588D7A7000B1D05 /* Subcategories.swift */; };
+		784331432588D7D3000B1D05 /* Subcategories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784331422588D7D3000B1D05 /* Subcategories.storyboard */; };
+		784331482588E17F000B1D05 /* SubcategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784331472588E17F000B1D05 /* SubcategoriesTableViewCell.swift */; };
 		786B755C2586A8FC00C5031F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B755B2586A8FC00C5031F /* DataProvider.swift */; };
 		78A88A882587D96100F531BD /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A88A872587D96100F531BD /* CategoriesTableViewCell.swift */; };
 		78A88A8C2587E23100F531BD /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A88A8B2587E23100F531BD /* CircleView.swift */; };
@@ -42,6 +49,13 @@
 		782149A425869E2D00CC8DE6 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		782149B025869E9700CC8DE6 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		7843312B2588B6A7000B1D05 /* UIImageView+ImageLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoad.swift"; sourceTree = "<group>"; };
+		784331322588D7A7000B1D05 /* SubcategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoriesPresenter.swift; sourceTree = "<group>"; };
+		784331332588D7A7000B1D05 /* SubcategoriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoriesRouter.swift; sourceTree = "<group>"; };
+		784331342588D7A7000B1D05 /* SubcategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoriesViewController.swift; sourceTree = "<group>"; };
+		784331352588D7A7000B1D05 /* SubcategoriesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoriesConfigurator.swift; sourceTree = "<group>"; };
+		784331362588D7A7000B1D05 /* Subcategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subcategories.swift; sourceTree = "<group>"; };
+		784331422588D7D3000B1D05 /* Subcategories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Subcategories.storyboard; sourceTree = "<group>"; };
+		784331472588E17F000B1D05 /* SubcategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		786B755B2586A8FC00C5031F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		78A88A872587D96100F531BD /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		78A88A8B2587E23100F531BD /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
@@ -128,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				7821499F25869CE800CC8DE6 /* Categories */,
+				784331312588D790000B1D05 /* Subcategories */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -192,6 +207,68 @@
 				7843312B2588B6A7000B1D05 /* UIImageView+ImageLoad.swift */,
 			);
 			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		784331312588D790000B1D05 /* Subcategories */ = {
+			isa = PBXGroup;
+			children = (
+				784331412588D7C6000B1D05 /* Model */,
+				784331402588D7C1000B1D05 /* View */,
+				7843313F2588D7BA000B1D05 /* Presenter */,
+				7843313E2588D7B4000B1D05 /* Router */,
+				7843313D2588D7AC000B1D05 /* Configurator */,
+			);
+			path = Subcategories;
+			sourceTree = "<group>";
+		};
+		7843313D2588D7AC000B1D05 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				784331352588D7A7000B1D05 /* SubcategoriesConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		7843313E2588D7B4000B1D05 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				784331332588D7A7000B1D05 /* SubcategoriesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7843313F2588D7BA000B1D05 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				784331322588D7A7000B1D05 /* SubcategoriesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		784331402588D7C1000B1D05 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				784331462588E167000B1D05 /* Cell */,
+				784331342588D7A7000B1D05 /* SubcategoriesViewController.swift */,
+				784331422588D7D3000B1D05 /* Subcategories.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		784331412588D7C6000B1D05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				784331362588D7A7000B1D05 /* Subcategories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		784331462588E167000B1D05 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				784331472588E17F000B1D05 /* SubcategoriesTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		786B755A2586A8D700C5031F /* Services */ = {
@@ -298,6 +375,7 @@
 				7821498E258684EF00CC8DE6 /* LaunchScreen.storyboard in Resources */,
 				782149B125869E9700CC8DE6 /* Categories.storyboard in Resources */,
 				7821498B258684EF00CC8DE6 /* Assets.xcassets in Resources */,
+				784331432588D7D3000B1D05 /* Subcategories.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,14 +432,20 @@
 				782149A525869E2D00CC8DE6 /* CategoriesPresenter.swift in Sources */,
 				7843312C2588B6A7000B1D05 /* UIImageView+ImageLoad.swift in Sources */,
 				78A88A882587D96100F531BD /* CategoriesTableViewCell.swift in Sources */,
+				7843313B2588D7A7000B1D05 /* Subcategories.swift in Sources */,
 				78214982258684ED00CC8DE6 /* AppDelegate.swift in Sources */,
+				7843313A2588D7A7000B1D05 /* SubcategoriesConfigurator.swift in Sources */,
+				784331382588D7A7000B1D05 /* SubcategoriesRouter.swift in Sources */,
 				782149A825869E2D00CC8DE6 /* CategoriesConfigurator.swift in Sources */,
 				78A88AA72588030E00F531BD /* Subcategory+Init.swift in Sources */,
+				784331392588D7A7000B1D05 /* SubcategoriesViewController.swift in Sources */,
 				78A88A902587E51200F531BD /* Database.swift in Sources */,
 				78A88A952587E68600F531BD /* Data.xcdatamodeld in Sources */,
 				78A88A9A2587EC6700F531BD /* Category+Init.swift in Sources */,
 				782149A725869E2D00CC8DE6 /* CategoriesViewController.swift in Sources */,
 				782149A625869E2D00CC8DE6 /* CategoriesRouter.swift in Sources */,
+				784331482588E17F000B1D05 /* SubcategoriesTableViewCell.swift in Sources */,
+				784331372588D7A7000B1D05 /* SubcategoriesPresenter.swift in Sources */,
 				782149A925869E2D00CC8DE6 /* Categories.swift in Sources */,
 				786B755C2586A8FC00C5031F /* DataProvider.swift in Sources */,
 			);

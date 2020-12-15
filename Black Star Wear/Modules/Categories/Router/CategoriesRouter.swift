@@ -9,6 +9,8 @@ import UIKit
 
 protocol CategoriesRouterProtocol {
     init(view: UIViewController)
+    
+    func moveToSubcategories(category: Category)
 }
 
 final class CategoriesRouter: CategoriesRouterProtocol {
@@ -21,6 +23,19 @@ final class CategoriesRouter: CategoriesRouterProtocol {
     
     init(view: UIViewController) {
         self.view = view
+    }
+    
+    // MARK: - Methods
+    
+    func moveToSubcategories(category: Category) {
+        guard
+            let view = view, let navigationController = view.navigationController,
+            let viewController = SubcategoriesConfigurator.shared.configure(with: category)
+        else {
+            return
+        }
+        
+        navigationController.pushViewController(viewController, animated: true)
     }
     
 }
