@@ -23,10 +23,33 @@ final class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        customizeAppearance()
+        
         tableView.dataSource = presenter as? UITableViewDataSource
         tableView.delegate = presenter as? UITableViewDelegate
         
         presenter?.fetchData()
+    }
+    
+}
+
+// MARK: - Appearance Customization
+
+extension CategoriesViewController {
+    
+    // Группирует методы кастомизации представления.
+    private func customizeAppearance() {
+        setNavigationLogo()
+    }
+    
+    // Устанавливает логотип в панели навигации.
+    private func setNavigationLogo() {
+        guard let logoImage = UIImage(named: "logo") else { return }
+        
+        let logoView = UIImageView()
+        logoView.image = logoImage
+        
+        self.navigationItem.titleView = logoView
     }
     
 }
