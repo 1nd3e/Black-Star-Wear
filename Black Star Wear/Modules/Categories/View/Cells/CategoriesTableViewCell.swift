@@ -11,7 +11,22 @@ final class CategoriesTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var thumbImageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var thumbImageView: UIImageView!
+    
+    // MARK: - Methods
+    
+    // Конфигурирует ячейку с данными из модели.
+    func configure(with model: Category) {
+        guard
+            let name = model.name,
+            let imageURL = model.imageURL
+        else {
+            return
+        }
+        
+        titleLabel.text = name
+        thumbImageView.loadImage(from: imageURL)
+    }
     
 }

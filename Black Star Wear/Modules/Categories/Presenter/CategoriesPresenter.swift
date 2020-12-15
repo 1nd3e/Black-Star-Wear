@@ -84,7 +84,7 @@ extension CategoriesPresenter: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell") as? CategoriesTableViewCell else { return UITableViewCell() }
         
         let category = fetchedResultsController.object(at: indexPath)
-        cell.titleLabel.text = category.name
+        cell.configure(with: category)
         
         return cell
     }
