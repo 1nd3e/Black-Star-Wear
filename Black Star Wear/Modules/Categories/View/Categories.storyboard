@@ -42,7 +42,7 @@
                                                         <constraint firstItem="weI-5G-Muf" firstAttribute="top" secondItem="zNN-wF-nl3" secondAttribute="top" id="DhA-EL-hVM"/>
                                                         <constraint firstItem="weI-5G-Muf" firstAttribute="leading" secondItem="zNN-wF-nl3" secondAttribute="leading" id="KFV-bV-vuB"/>
                                                         <constraint firstAttribute="width" constant="56" id="UEo-pz-aT4"/>
-                                                        <constraint firstAttribute="height" constant="56" id="i7d-uN-tFn"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="i7d-uN-tFn"/>
                                                         <constraint firstAttribute="bottom" secondItem="weI-5G-Muf" secondAttribute="bottom" id="ixj-1D-DZa"/>
                                                     </constraints>
                                                 </view>
