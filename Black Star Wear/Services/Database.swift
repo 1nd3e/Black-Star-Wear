@@ -41,10 +41,29 @@ final class Database {
         return context
     }()
     
-    // MARK: - Methods
+    // MARK: - Public Methods
+    
+    // Сохраняет список категорий и подкатегорий в базу данных.
+    func write(data categories: [CategoriesItem]) {
+        categories.forEach { model in
+            save { context in
+                let category = Category(model: model, context: context)
+                
+                let subcategories = model.subcategories
+                subcategories.forEach { data in
+                    guard let model = SubcategoriesItem(data: data) else { return }
+                    let subcategory = Subcategory(model: model, context: context)
+                    
+                    category.addToSubcategories(subcategory)
+                }
+            }
+        }
+    }
+    
+    // MARK: - Private Methods
     
     // Выполняет сохранение данные в фоновом контексте.
-    func save(_ block: @escaping (NSManagedObjectContext) -> Void) {
+    private func save(_ block: @escaping (NSManagedObjectContext) -> Void) {
         let context = backgroundContext
         
         context.perform {

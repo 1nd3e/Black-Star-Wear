@@ -57,31 +57,12 @@ final class CategoriesPresenter: NSObject, CategoriesPresenterProtocol {
         self.router = router
     }
     
-    // MARK: - Public Methods
+    // MARK: - Methods
     
     // Запрашивает список категорий для презентации.
     func fetchData() {
-        DataProvider.shared.getCategoriesList { [weak self] categories in
-            self?.saveData(categories)
-        }
-    }
-    
-    // MARK: - Private Methods
-    
-    // Сохраняет в базу данных список категорий и подкатегорий.
-    private func saveData(_ data: [CategoriesItem]) {
-        data.forEach { model in
-            Database.shared.save { context in
-                let category = Category(model: model, context: context)
-                
-                let subcategories = model.subcategories
-                subcategories.forEach { data in
-                    guard let subcategoriesItem = SubcategoriesItem(data: data) else { return }
-                    let subcategory = Subcategory(model: subcategoriesItem, context: context)
-                    
-                    category.addToSubcategories(subcategory)
-                }
-            }
+        DataProvider.shared.getCategoriesList { categories in
+            Database.shared.write(data: categories)
         }
     }
     
