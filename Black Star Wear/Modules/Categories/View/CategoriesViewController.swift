@@ -24,6 +24,7 @@ final class CategoriesViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = presenter as? UITableViewDataSource
+        tableView.delegate = presenter as? UITableViewDelegate
         
         presenter?.fetchData()
     }
