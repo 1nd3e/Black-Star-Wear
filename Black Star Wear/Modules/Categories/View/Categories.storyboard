@@ -69,18 +69,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Lkg-y8-aRU">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K5Z-ZR-fif"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="K5Z-ZR-fif" firstAttribute="bottom" secondItem="Ekd-Ha-n1a" secondAttribute="bottom" id="8Ld-go-c41"/>
                             <constraint firstItem="K5Z-ZR-fif" firstAttribute="trailing" secondItem="Ekd-Ha-n1a" secondAttribute="trailing" id="MWu-0r-lkH"/>
+                            <constraint firstItem="Lkg-y8-aRU" firstAttribute="centerX" secondItem="WLp-t6-rRM" secondAttribute="centerX" id="Wth-tQ-RsE"/>
                             <constraint firstItem="Ekd-Ha-n1a" firstAttribute="leading" secondItem="K5Z-ZR-fif" secondAttribute="leading" id="d38-iv-3Uh"/>
                             <constraint firstItem="Ekd-Ha-n1a" firstAttribute="top" secondItem="K5Z-ZR-fif" secondAttribute="top" id="mmF-RF-QrY"/>
+                            <constraint firstItem="Lkg-y8-aRU" firstAttribute="centerY" secondItem="WLp-t6-rRM" secondAttribute="centerY" id="yR5-uA-dqp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Категории" id="R95-QA-L5W"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="Lkg-y8-aRU" id="i53-3b-rct"/>
                         <outlet property="tableView" destination="Ekd-Ha-n1a" id="rVc-fd-9Bg"/>
                     </connections>
                 </viewController>

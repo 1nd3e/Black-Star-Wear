@@ -12,6 +12,7 @@ final class CategoriesViewController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
     
     // MARK: - Properties
     
@@ -40,6 +41,8 @@ extension CategoriesViewController: CategoriesViewProtocol {
         case false:
             tableView.endUpdates()
         }
+        
+        activityIndicatorView.stopAnimating()
     }
     
     func tableView(shouldInsertRowsAt indexPath: [IndexPath]) {
