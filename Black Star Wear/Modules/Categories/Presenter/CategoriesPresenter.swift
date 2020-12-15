@@ -31,11 +31,11 @@ final class CategoriesPresenter: NSObject, CategoriesPresenterProtocol {
     private lazy var fetchedResultsController: NSFetchedResultsController<Category> = {
         let context = Database.shared.viewContext
         
-        let sortByName = NSSortDescriptor(key: "name", ascending: true)
         let sortBySortOrder = NSSortDescriptor(key: "sortOrder", ascending: true)
+        let sortByName = NSSortDescriptor(key: "name", ascending: true)
         
         let fetchRequest: NSFetchRequest<Category> = Category.fetchRequest()
-        fetchRequest.sortDescriptors = [sortByName, sortBySortOrder]
+        fetchRequest.sortDescriptors = [sortBySortOrder, sortByName]
         fetchRequest.fetchBatchSize = 24
         
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)

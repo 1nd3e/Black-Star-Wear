@@ -32,6 +32,8 @@ struct CategoriesItem {
         self.imageURL = imageURL
         self.subcategories = subcategories
         self.sortOrder = sortOrder
+        
+        print("\(name): \(sortOrder)")
     }
     
 }
