@@ -19,7 +19,7 @@ final class SubcategoriesConfigurator {
         let storyboard = UIStoryboard(name: "Subcategories", bundle: nil)
         guard let view = storyboard.instantiateViewController(withIdentifier: "SubcategoriesViewController") as? SubcategoriesViewController else { return nil }
         let router = SubcategoriesRouter(view: view)
-        let presenter = SubcategoriesPresenter(view: view, router: router)
+        let presenter = SubcategoriesPresenter(view: view, router: router, category: category)
         view.presenter = presenter
         
         return view

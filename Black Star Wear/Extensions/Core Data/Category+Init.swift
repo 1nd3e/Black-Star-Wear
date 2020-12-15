@@ -13,7 +13,6 @@ extension Category {
         self.init(context: context)
         
         self.name = model.name
-        self.imageURL = model.imageURL
         self.sortOrder = model.sortOrder
     }
     

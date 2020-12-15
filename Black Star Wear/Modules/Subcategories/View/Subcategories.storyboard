@@ -54,6 +54,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Подкатегории" largeTitleDisplayMode="never" id="QPa-JA-Emi"/>
+                    <connections>
+                        <outlet property="tableView" destination="j9h-ZI-HN0" id="IkY-TE-d2F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKH-iD-DaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

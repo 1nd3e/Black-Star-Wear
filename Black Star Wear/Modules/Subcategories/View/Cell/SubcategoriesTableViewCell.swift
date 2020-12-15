@@ -11,5 +11,13 @@ final class SubcategoriesTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    
+    // MARK: - Methods
+    
+    // Конфигурирует ячейку с данными из модели.
+    func configure(with model: Subcategory) {
+        guard let name = model.name else { return }
+        titleLabel.text = name
+    }
 }
