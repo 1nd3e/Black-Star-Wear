@@ -20,6 +20,7 @@ final class SubcategoriesConfigurator {
         guard let view = storyboard.instantiateViewController(withIdentifier: "SubcategoriesViewController") as? SubcategoriesViewController else { return nil }
         let router = SubcategoriesRouter(view: view)
         let presenter = SubcategoriesPresenter(view: view, router: router, category: category)
+        view.navigationItem.title = category.name
         view.presenter = presenter
         
         return view
