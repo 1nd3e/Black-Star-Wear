@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWf-w4-iGC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Товар-->
         <scene sceneID="orB-2l-JzG">
             <objects>
                 <viewController id="dWf-w4-iGC" sceneMemberID="viewController">
@@ -131,6 +131,7 @@
                             <constraint firstItem="1me-mn-RHp" firstAttribute="trailing" secondItem="Cb6-hA-DXf" secondAttribute="trailing" id="Tm6-Z9-bJv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Товар" id="FFk-79-p4N"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeO-Qd-IHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
