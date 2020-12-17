@@ -44,6 +44,7 @@
 		78A88A952587E68600F531BD /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78A88A932587E68600F531BD /* Data.xcdatamodeld */; };
 		78A88A9A2587EC6700F531BD /* Category+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A88A992587EC6700F531BD /* Category+Init.swift */; };
 		78A88AA72588030E00F531BD /* Subcategory+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A88AA62588030E00F531BD /* Subcategory+Init.swift */; };
+		78D2F3E3258A2FEC005A17B1 /* Product+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D2F3E2258A2FEC005A17B1 /* Product+Init.swift */; };
 		8E557FB31082D47551BD995F /* Pods_Black_Star_Wear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6798E8D48639C5802225F97B /* Pods_Black_Star_Wear.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		78A88A942587E68600F531BD /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		78A88A992587EC6700F531BD /* Category+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+Init.swift"; sourceTree = "<group>"; };
 		78A88AA62588030E00F531BD /* Subcategory+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subcategory+Init.swift"; sourceTree = "<group>"; };
+		78D2F3E2258A2FEC005A17B1 /* Product+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+Init.swift"; sourceTree = "<group>"; };
 		84BC63F168DA7516B05D08EB /* Pods-Black Star Wear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Black Star Wear.debug.xcconfig"; path = "Target Support Files/Pods-Black Star Wear/Pods-Black Star Wear.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -444,6 +446,7 @@
 			children = (
 				78A88A992587EC6700F531BD /* Category+Init.swift */,
 				78A88AA62588030E00F531BD /* Subcategory+Init.swift */,
+				78D2F3E2258A2FEC005A17B1 /* Product+Init.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				78214982258684ED00CC8DE6 /* AppDelegate.swift in Sources */,
 				7843313A2588D7A7000B1D05 /* SubcategoriesConfigurator.swift in Sources */,
 				784331382588D7A7000B1D05 /* SubcategoriesRouter.swift in Sources */,
+				78D2F3E3258A2FEC005A17B1 /* Product+Init.swift in Sources */,
 				782149A825869E2D00CC8DE6 /* CategoriesConfigurator.swift in Sources */,
 				78A88AA72588030E00F531BD /* Subcategory+Init.swift in Sources */,
 				784331392588D7A7000B1D05 /* SubcategoriesViewController.swift in Sources */,

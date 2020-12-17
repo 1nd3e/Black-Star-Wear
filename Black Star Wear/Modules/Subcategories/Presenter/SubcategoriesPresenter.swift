@@ -90,6 +90,9 @@ extension SubcategoriesPresenter: UITableViewDataSource {
 extension SubcategoriesPresenter: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedSubcategory = fetchedResultsController.object(at: indexPath)
+        router.moveToProducts(subcategory: selectedSubcategory)
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

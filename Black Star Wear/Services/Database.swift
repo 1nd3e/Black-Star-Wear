@@ -60,6 +60,20 @@ final class Database {
         }
     }
     
+    // Сохраняет список товаров в базу данных.
+    func write(data products: [ProductsItem], relationship subcategory: Subcategory) {
+        guard let id = subcategory.id else { return }
+        
+        products.forEach { model in
+            save { [weak self] context in
+                if let subcategory = self?.fetchObject(withIdentifier: id, type: Subcategory.self, in: context) {
+                    let product = Product(model: model, context: context)
+                    subcategory.addToProducts(product)
+                }
+            }
+        }
+    }
+    
     // MARK: - Private Methods
     
     // Выполняет сохранение данные в фоновом контексте.
@@ -77,6 +91,22 @@ final class Database {
                 }
             }
         }
+    }
+    
+    // Достаёт объект из базы данных.
+    private func fetchObject<T: NSManagedObject>(withIdentifier id: String, type: T.Type, in context: NSManagedObjectContext) -> T? {
+        var object: T?
+        
+        let fetchRequest = NSFetchRequest<T>(entityName: String(describing: T.self))
+        fetchRequest.predicate = NSPredicate(format: "id == %@", id)
+        
+        do {
+            object = try context.fetch(fetchRequest).first
+        } catch let error {
+            print("Unable to fetch object: \(error.localizedDescription)")
+        }
+        
+        return object
     }
     
 }

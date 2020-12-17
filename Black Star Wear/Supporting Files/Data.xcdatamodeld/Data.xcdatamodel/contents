@@ -10,11 +10,30 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <entity name="Product" representedClassName="Product" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="overview" attributeType="String"/>
+        <attribute name="price" attributeType="String"/>
+        <attribute name="productImages" attributeType="Transformable" valueTransformerName="" customClassName="Array&lt;[String: Any]&gt;"/>
+        <attribute name="sortOrder" attributeType="String"/>
+        <attribute name="thumbImageUrl" attributeType="String"/>
+        <relationship name="subcategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Subcategory" inverseName="products" inverseEntity="Subcategory"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+                <constraint value="overview"/>
+                <constraint value="price"/>
+                <constraint value="thumbImageUrl"/>
+                <constraint value="sortOrder"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
     <entity name="Subcategory" representedClassName="Subcategory" syncable="YES" codeGenerationType="class">
         <attribute name="id" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="sortOrder" attributeType="String"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="subcategories" inverseEntity="Category"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="subcategory" inverseEntity="Product"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -24,6 +43,7 @@
     </entity>
     <elements>
         <element name="Category" positionX="-63" positionY="-18" width="128" height="74"/>
-        <element name="Subcategory" positionX="-54" positionY="9" width="128" height="89"/>
+        <element name="Product" positionX="-63" positionY="36" width="128" height="134"/>
+        <element name="Subcategory" positionX="-54" positionY="9" width="128" height="104"/>
     </elements>
 </model>
