@@ -4,6 +4,7 @@ target 'Black Star Wear' do
   use_frameworks!
 
   pod 'SwiftyJSON', '~> 5.0'
+  pod 'Kingfisher', '~> 5.0'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

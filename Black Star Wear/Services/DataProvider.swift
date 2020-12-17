@@ -56,40 +56,6 @@ final class DataProvider {
         dataTask.resume()
     }
     
-    // Загружает изображение по ссылке.
-    // Если изображение лежит в кэше, то отдаём его без осуществления сетевого запроса,
-    // в противном случае выполняем новую загрузку изображения.
-    func loadImage(from imagePath: String, completion: @escaping DataCompletionBlock) {
-        let urlString = "https://blackstarshop.ru/\(imagePath)"
-        guard let url = URL(string: urlString) else { return }
-        
-        let cache = URLCache.shared
-        let request = URLRequest(url: url)
-        
-        DispatchQueue.global(qos: .background).async {
-            if let cachedResponse = cache.cachedResponse(for: request) {
-                let data = cachedResponse.data
-                
-                DispatchQueue.main.async {
-                    completion(data)
-                }
-            } else {
-                let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
-                    if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200, error == nil {
-                        let cachedData = CachedURLResponse(response: response, data: data)
-                        cache.storeCachedResponse(cachedData, for: request)
-                        
-                        DispatchQueue.main.async {
-                            completion(data)
-                        }
-                    }
-                }
-                
-                dataTask.resume()
-            }
-        }
-    }
-    
     // MARK: - Private Methods
     
     // Парсит список категорий товаров.

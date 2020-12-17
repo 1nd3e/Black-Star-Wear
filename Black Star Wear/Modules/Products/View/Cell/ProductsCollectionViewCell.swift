@@ -6,15 +6,16 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class ProductsCollectionViewCell: UICollectionViewCell {
     
     // MARK: - IBOutlets
     
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var thumbImageView: UIImageView!
-    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var thumbImageView: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -43,8 +44,9 @@ final class ProductsCollectionViewCell: UICollectionViewCell {
         
         titleLabel.text = name
         descriptionLabel.text = description
-        thumbImageView.loadImage(from: thumbImageUrl)
         priceLabel.text = price
+        
+        self.setThumbImage(from: thumbImageUrl)
     }
     
     // MARK: - Private Methods
@@ -57,6 +59,17 @@ final class ProductsCollectionViewCell: UICollectionViewCell {
         
         self.contentView.widthAnchor.constraint(equalToConstant: relativeCellWidth)
             .isActive = true
+    }
+    
+    // Устанавливает изображение превью товара.
+    func setThumbImage(from path: String) {
+        guard let url = URL(string: "https://blackstarshop.ru/\(path)") else { return }
+        
+        let fadeImageTransition: ImageTransition  = .fade(0.2)
+        let transition: KingfisherOptionsInfoItem = .transition(fadeImageTransition)
+        
+        thumbImageView.kf.indicatorType = .activity
+        thumbImageView.kf.setImage(with: url, options: [transition])
     }
     
 }

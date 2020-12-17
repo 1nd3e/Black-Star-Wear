@@ -98,7 +98,15 @@ extension ProductsPresenter: UICollectionViewDataSource {
 
 // MARK: - UICollectionView Delegate
 
-extension ProductsPresenter: UICollectionViewDelegate {}
+extension ProductsPresenter: UICollectionViewDelegate {
+    
+    // Отменяет незавершенную загрузку изображения при исчезновении ячейки.
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let cell = cell as? ProductsCollectionViewCell else { return }
+        cell.thumbImageView.kf.cancelDownloadTask()
+    }
+    
+}
 
 // MARK: - NSFetchedResultsController Delegate
 
